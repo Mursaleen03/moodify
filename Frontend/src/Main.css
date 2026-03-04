@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+:root {
+  background-color: black;
+  color: whitesmoke;
+}
+
+html, body {
+  background-color: black;
+  color: whitesmoke; /* Setting text color to white for better contrast on black background */
+}
