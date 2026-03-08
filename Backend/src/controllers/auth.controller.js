@@ -80,7 +80,10 @@ async function loginUser(req, res) {
         email: user.email,
       },
     });
-  } catch (error) {}
+  } catch (error) {
+    console.error("Error in login:", error);
+    return res.status(500).json({ message: "Internal server error" });
+  }
 }
 
 async function getMe(req, res) {

@@ -19,9 +19,12 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add your login logic here
-    await loginUser({ email, password });
-    navigate("/");
+    try {
+      await loginUser({ email, password });
+      navigate("/");
+    } catch (error) {
+      console.error("Login submission failed:", error);
+    }
   };
 
   return (
